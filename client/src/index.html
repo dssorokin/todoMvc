@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TodoMvc jQuery + PHP</title>
+</head>
+<body>
+<div class="row">
+	<div class="todos col s6">
+		<div class="todos__input clearfix">
+			<div class="row">
+				<form id="task-create" class="col s12">
+					<h2>Tasks todo</h2>
+					<div class="row">
+						<div class="input-field col s6">
+							<input placeholder="Your task" id="text-task" type="text" class="validate">
+						</div>
+						<button type="submit" class="waves-effect waves-light btn">Create task</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="todos__items"></div>
+	</div>
+</div>
+
+
+	</div>
+
+	<script type="text/template" id="todo-item">
+		<div class="todo-item">
+			<div class="todo-item__text">
+				<p><%= text %></p>
+			</div>
+			<div class="todo-item__isChecked">
+				<!--<p>-->
+					<!--<input type="checkbox" <% if(isChecked) {%> checked <% } %>/>-->
+				<!--</p>-->
+				<p>
+					<input type="checkbox" id="<%= id %>" <% if(isChecked) {%> checked <% } %>/>
+					<label for="<%= id %>">Edit</label>
+				</p>
+			</div>
+			<div class="todo-item__delete">
+				<a data-id-todo="<%= id %>" href="">Delete</a>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

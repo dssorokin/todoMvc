@@ -1,0 +1,27 @@
+.btn{
+  margin-top: 20px;
+}
+.todo-item{
+  position: relative;
+  &__text{
+    width: 300px;
+
+    font-size: 22px;
+
+  }
+  &__delete{
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  &__isChecked{
+    position: absolute;
+    right: 70px;
+    top: 0;
+    //input[type="checkbox"]{
+    //  position: static;
+    //
+    //  opacity: 1;
+    //}
+  }
+}
